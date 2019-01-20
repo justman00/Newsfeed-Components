@@ -48,8 +48,8 @@
   width: 350px;
   height: 100vh;
   /* This give the height 100% of the screen or, '100% of View Height' */
-  background-color: #81C784;
-  border: 1px solid #004D40;
+  background-color: #81c784;
+  border: 1px solid #004d40;
   border-left: none;
   border-bottom: none;
   z-index: 2;
@@ -63,6 +63,21 @@
 }
 .menu--open {
   display: block;
+  animation-name: openMenu;
+  animation-duration: 1s;
+}
+@keyframes openMenu {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.99;
+  }
+  100% {
+    top: 75px;
+    opacity: 1;
+  }
 }
 .articles {
   margin-top: 95px;
