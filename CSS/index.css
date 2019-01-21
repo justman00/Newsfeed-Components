@@ -125,6 +125,24 @@
 }
 .article-open {
   height: 400px;
+  transition: height 1s;
+}
+.article-close {
+  height: 50px;
+  transition: height 1s;
+}
+.read {
+  display: none;
+}
+.readButton {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
 }
 html,
 body {
