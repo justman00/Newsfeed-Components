@@ -1,6 +1,15 @@
 const toggleMenu = () => {
   // Toggle the "menu--open" class on your menu refence.
-  menu.classList.toggle("menu--open");
+
+  if (menu.classList.contains("menu--open")) {
+    menu.classList.remove("menu--open");
+    menu.classList.add("menu--close");
+  } else if (menu.classList.contains("menu--close")) {
+    menu.classList.remove("menu--close");
+    menu.classList.add("menu--open");
+  } else {
+    menu.classList.add("menu--open");
+  }
 };
 
 // Start Here: Create a reference to the ".menu" class
@@ -14,8 +23,6 @@ menuButton.addEventListener("click", e => {
 });
 
 window.addEventListener("click", e => {
-  let res;
-  console.log(e.target);
   if (e.target !== menuButton && e.target !== menu) {
     if (
       !Array.from(document.querySelectorAll(".menu ul li")).includes(e.target)
