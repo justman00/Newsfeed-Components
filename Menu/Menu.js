@@ -28,6 +28,7 @@ window.addEventListener("click", e => {
       !Array.from(document.querySelectorAll(".menu ul li")).includes(e.target)
     ) {
       menu.classList.remove("menu--open");
+      menu.classList.add("menu--close");
     }
   }
 });
