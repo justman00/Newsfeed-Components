@@ -33,10 +33,12 @@ class Article {
     const arrArticles = Array.from(articles);
     arrArticles.splice(arrArticles.indexOf(this.domElement), 1);
     // console.log(arrArticles);
+    // looping through all the articles and closing each of them
     for (let i = 0; i < arrArticles.length; i++) {
       arrArticles[i].classList.remove("article-open");
       arrArticles[i].classList.add("article-close");
     }
+    // all the if else is basically toggling the text to close and the class
     if (this.domElement.classList.contains("article-open")) {
       this.domElement.classList.remove("article-open");
       this.domElement.classList.add("article-close");
@@ -51,6 +53,7 @@ class Article {
       this.domElement.classList.add("article-open");
       this.expandButton.textContent = "Click to Close";
     }
+    // make all of the expanded buttons show Click to expand
     for (let i = 0; i < arrArticles.length; i++) {
       arrArticles[i].querySelector(".expandButton").textContent =
         "Click to Expand";

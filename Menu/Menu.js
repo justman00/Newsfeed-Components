@@ -1,6 +1,6 @@
 const toggleMenu = () => {
   // Toggle the "menu--open" class on your menu refence.
-
+  // toggling 2 classes
   if (menu.classList.contains("menu--open")) {
     menu.classList.remove("menu--open");
     menu.classList.add("menu--close");
@@ -22,6 +22,7 @@ menuButton.addEventListener("click", e => {
   toggleMenu();
 });
 
+// makes clicking anywhere but the header or the menu close the menu
 window.addEventListener("click", e => {
   if (e.target !== menuButton && e.target !== menu) {
     if (
